@@ -1,15 +1,3 @@
-//===----------------------------------------------------------------------===//
-//
-//                         BusTub
-//
-// hyperloglog.h
-//
-// Identification: src/include/primer/hyperloglog.h
-//
-// Copyright (c) 2015-2025, Carnegie Mellon University Database Group
-//
-//===----------------------------------------------------------------------===//
-
 #pragma once
 
 #include <bitset>
@@ -71,7 +59,9 @@ class HyperLogLog {
 
   /** @brief Cardinality value. */
   size_t cardinality_;
-
+  std::vector<int16_t> registers_;
+  int16_t n_bits_;
+  std::bitset<BITSET_CAPACITY> bset;
   /** @todo (student) can add their data structures that support HyperLogLog */
 };
 
